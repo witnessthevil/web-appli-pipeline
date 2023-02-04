@@ -1,0 +1,15 @@
+in this real streaming pipeline, we will be building a real streaming pipeline that collect the website log data 
+
+environment 
+- zookeeper 
+- hdfs 
+- hive 
+- iceberg 
+- hbase 
+- pheonix 
+- kafka
+- redis 
+- flink 
+- flume 
+- maxwell 
+- Clickhouse 
