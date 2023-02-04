@@ -1,0 +1,16 @@
+FROM ubuntu:latest
+
+RUN apt-get update && apt-get install nano wget default-jdk -y 
+
+WORKDIR /root 
+
+RUN wget https://downloads.apache.org/kafka/3.3.2/kafka_2.12-3.3.2.tgz && \
+    tar -xvzf kafka_2.12-3.3.2.tgz && mv kafka_2.12-3.3.2 /usr/local/kafka && \
+    wget https://github.com/zendesk/maxwell/releases/download/v1.39.4/maxwell-1.39.4.tar.gz && \
+    tar zxvf maxwell-1.39.4.tar.gz
+
+ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-arm64/
+
+EXPOSE 9092 
+
+#remember to change the server.properties file so that 
